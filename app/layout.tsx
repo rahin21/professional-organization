@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Darker_Grotesque } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/nav";
 
 const inter = Inter({ subsets: ["latin"] });
+const grotesque = Darker_Grotesque({subsets: ["latin"]})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,9 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Nav />
-        {children}
+      <body className={grotesque.className}>
+        <div className="lg:mx-12 md:mx-8 mx-0">
+          <Nav />
+          {children}
+        </div>
       </body>
     </html>
   );

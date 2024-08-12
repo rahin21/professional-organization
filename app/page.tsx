@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main>
       <Button>hello world</Button>
-      <div className=" font-normal"></div>
+      <div className=" font-"></div>
     </main>
   );
 }
