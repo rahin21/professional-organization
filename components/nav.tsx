@@ -6,12 +6,15 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { NavDropdown } from "./navDropdown";
 import { usePathname } from "next/navigation";
+import { Darker_Grotesque } from "next/font/google";
+
+const grotesque = Darker_Grotesque({subsets: ["latin"]})
 
 function Nav() {
  const currentPath = usePathname();
  
   return (
-    <nav>
+    <nav className={`${grotesque.className} z-10 bg-gradient-to-t from-black/5 to-white/60 lg:px-12 md:px-8 px-0 `}>
       <ul className="flex justify-between items-center py-6">
         <div className="hidden lg:flex gap-10 ">
           <li>
