@@ -1,39 +1,54 @@
-import Image from 'next/image'
-import React from 'react'
-import serviceImage from "/public/home/service.png"
-import icon1 from "/public/home/icon1.png"
-import icon2 from "/public/home/icon2.png"
-import icon3 from "/public/home/icon3.png"
+import Image from "next/image";
+import React from "react";
+import serviceImage from "/public/home/service.png";
+import icon1 from "/public/home/icon1.png";
+import icon2 from "/public/home/icon2.png";
+import icon3 from "/public/home/icon3.png";
+import { services } from "@/constants/serviceData";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 function Service() {
   return (
-    <div className='mx-16'>
-      <div className="bg-white/80">
-        <Image
-          src={serviceImage}
-          alt="hero image"
-          className="w-full h-full object-cover -z-20 absolute left-0 px-16"
-        />
-        <div className="z-10 lg:flex">
-          <div>
-            <Image src={icon1} alt='icon 1'/>
-            <h1 className='uppercase text-xl font-semibold text-center '>DECLUTTER</h1>
-            <p><strong>Step One:</strong> Explore and separate essential, wanted, and excess items while identifying target areas for functional placement</p>
-          </div>
-          <div>
-            <Image src={icon2} alt='icon 1'/>
-            <h1 className='uppercase text-xl font-semibold text-center '>Direction</h1>
-            <p><strong>Step Two:</strong> Guided placement that aligns and maximizes the potential flow of your day-to-day lifestyle and routine</p>
-          </div>
-          <div>
-            <Image src={icon3} alt='icon 1'/>
-            <h1 className='uppercase text-xl font-semibold text-center '>Donate & Discard</h1>
-            <p><strong>Step Three:</strong> Let go of the things that create clutter and don’t add to  productivity or convenience</p>
-          </div>
+    <div className="lg:mx-16 mx-8">
+      <div className="bg-white/80 w-full lg:h-[50rem] h-full bg-cover bg-center relative flex flex-col items-center justify-center">
+          <Image
+            src={serviceImage}
+            alt="hero image"
+            className="w-full h-full object-cover absolute -z-10"
+          />
+        <div className="z-10 md:flex justify-center gap-5 md:p-5 lg:p-20">
+          {services.map((service, index) => (
+            <div
+              key={service.image}
+              className="flex flex-col items-center gap-10 w-full md:w-[30%] "
+            >
+              <Image
+                src={service.image}
+                width={250}
+                height={250}
+                alt="icon 1"
+              />
+              <h1 className="uppercase text-xl font-semibold text-center">
+                {service.title}
+              </h1>
+              <p className="text-center text-sm px-5 w-full lg:w-[80%] lg:px-0">
+                <strong>
+                  Step {index === 0 ? "One" : index === 1 ? "Two" : "Three"}:
+                </strong>{" "}
+                {service.description}{" "}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="flex justify-center md:pb-10 pb-0 md:py-0 py-10">
+          <Button className="md:px-20 md:py-10" >
+            <Link href="/our-services">Our Services</Link>
+          </Button>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Service
+export default Service;
