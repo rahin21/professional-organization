@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import serviceImage from "/public/home/service.png";
-import { services } from "@/constants/serviceData";
+import { services } from "@/constants/homeServiceData";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
