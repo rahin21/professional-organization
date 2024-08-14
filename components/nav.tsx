@@ -37,7 +37,9 @@ function Nav() {
           </Link>
         </li>
         <li className="hidden lg:block">
+          <Link href={"/contact"}>
           <Button className="uppercase">Book A Consult</Button>
+          </Link>
         </li>
         <li  className="block lg:hidden p-5">
           <NavDropdown/>
