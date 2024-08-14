@@ -31,8 +31,8 @@ function ContactForm() {
             <Label htmlFor="first-name">
               Name <span className="text-muted-foreground">(required)</span>{" "}
             </Label>
-            <div className="flex gap-5">
-              <div className="flex flex-col space-y-1.5 w-full">
+            <div className="md:flex gap-5">
+              <div className="flex flex-col space-y-1.5 w-full lg:mb-0 mb-4">
                 <Label htmlFor="first-name">First Name</Label>
                 <Input id="first-name" />
               </div>

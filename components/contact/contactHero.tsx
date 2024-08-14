@@ -3,6 +3,7 @@ import React from "react";
 import heroImage from "/public/contact/heroImage.png";
 import { Button } from "../ui/button";
 import ContactForm from "./contactForm";
+import Link from "next/link";
 
 function ContactHero() {
   return (
@@ -24,7 +25,12 @@ function ContactHero() {
             </p>
           </div>
           <div className="flex md:flex-row flex-col items-center justify-between my-20">
-            <Button className="lg:px-28 lg:py-12 md:mb-0 mb-10"> Complete Questionnaire </Button>
+            <Link href={"/questionnaire"}>
+              <Button className="lg:px-28 lg:py-12 md:mb-0 mb-10">
+                {" "}
+                Complete Questionnaire{" "}
+              </Button>
+            </Link>
             <Button className="lg:px-28 lg:py-12">
               {" "}
               Download PDF Questionnaire{" "}
