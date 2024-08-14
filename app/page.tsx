@@ -9,16 +9,16 @@ import { slider } from "@/constants/sliderData";
 export default function Home() {
   return (
     <main>
-      <div className="aspect-video w-full md:h-[28.6rem] overflow-hidden bg-black/5 ">
+      <div className="bg-gradient-to-b from-white/60 from-10% via-black/5 to-70% to-black/5 w-full lg:h-[50rem] h-full bg-cover bg-center absolute top-0 flex flex-col items-center justify-center">
         <Image
           src={heroImage}
           alt="hero image"
-          className="top-0 w-full md:h-[48rem] h-[27rem] object-cover -z-10 absolute "
+          className="w-full h-full object-cover absolute -z-20"
         />
-        <h1 className="text-center mt-20 lg:text-[5.6rem] md:text-6xl text-4xl font-medium z-10 text-white px-4 ">
+      </div>
+        <h1 className="text-center mt-20 lg:text-[5.6rem] md:text-6xl text-4xl font-medium z-10 text-white px-4 mb-[25rem]">
           A life less frenzied.
         </h1>
-      </div>
       <About />
       <Service/>
       <CarouselSlider slider={slider}/>

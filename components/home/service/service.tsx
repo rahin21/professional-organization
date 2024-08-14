@@ -1,9 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import serviceImage from "/public/home/service.png";
-import icon1 from "/public/home/icon1.png";
-import icon2 from "/public/home/icon2.png";
-import icon3 from "/public/home/icon3.png";
 import { services } from "@/constants/serviceData";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
