@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import heroImage from "/public/home/heroImage.png";
 import About from "@/components/home/about/about";
